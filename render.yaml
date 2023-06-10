@@ -2,7 +2,7 @@ databases:
   - name: pms
     databaseName: mydatabase
     user: proma
-    password:
+    password: RsCRrHUYALLEjC3Qlg6KDuDob6OeVtpA
       fromDatabase:
         name: pms
         property: credentials.password
