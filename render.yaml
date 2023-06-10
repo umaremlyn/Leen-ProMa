@@ -3,7 +3,7 @@ databases:
     databaseName: leenproma
     user: proma
     password: RsCRrHUYALLEjC3Qlg6KDuDob6OeVtpA
-      fromDatabase:
+      fromDatabase :
         name: pms
         property: credentials.password
 
