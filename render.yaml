@@ -10,9 +10,9 @@ databases:
 services:
   - type: web
     name: proma
-envVars:
+    envVars:
       - key: DATABASE_URL
-        value: "postgresql://proma:RsCRrHUYALLEjC3Qlg6KDuDob6OeVtpA@dpg-ci25kg3hp8u1a18ojs80-a:5432/pms_zf1s"
+        value: "postgres://myuser:${PASSWORD}@${HOST}:${PORT}/mydatabase"
       - key: SECRET_KEY
         generateValue: true
     buildCommand: "./build.sh"
