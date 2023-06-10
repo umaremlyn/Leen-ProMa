@@ -1,11 +1,11 @@
 databases:
-  - name: Leen Proma
+  - name: Leen-Co Tech
     databaseName: pms
-    user: postgres
+    user: proma
 
 services:
   - type: web
-    name: Leen Proma
+    name: proma
     runtime: python
     buildCommand: "./build.sh"
     startCommand: "gunicorn mysite.wsgi:application"
@@ -18,4 +18,3 @@ services:
         generateValue: true
       - key: WEB_CONCURRENCY
         value: 4
-        
