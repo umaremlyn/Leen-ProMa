@@ -1,14 +1,15 @@
 databases:
-  - name: Leen-Co Tech
-    databaseName: pms
+  - name: pms
+    databaseName: mydatabase
     user: proma
+    password:
+      fromDatabase:
+        name: pms
+        property: credentials.password
 
 services:
   - type: web
     name: proma
-    runtime: python
-    buildCommand: "./build.sh"
-    startCommand: "gunicorn mysite.wsgi:application"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -16,5 +17,5 @@ services:
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
-      - key: WEB_CONCURRENCY
-        value: 4
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn mysite.wsgi:application"
