@@ -14,6 +14,6 @@ envVars:
       - key: DATABASE_URL
         value: "postgresql://proma:RsCRrHUYALLEjC3Qlg6KDuDob6OeVtpA@dpg-ci25kg3hp8u1a18ojs80-a:5432/pms_zf1s"
       - key: SECRET_KEY
-        generateValue: true
+        value: "f9e5e351825292219328b5ebea26690bbedccf1d7aaa0b3f0cd89b9b1ac1f1cf"
     buildCommand: "./build.sh"
     startCommand: "gunicorn mysite.wsgi:application"
