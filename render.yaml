@@ -13,6 +13,7 @@ services:
     buildCommand: "./build.sh"
     startCommand: "gunicorn proma.wsgi:application"
 envVars:
-    - key: DATABASE_URL
+-
+    key: DATABASE_URL
     value: "postgresql://proma:RsCRrHUYALLEjC3Qlg6KDuDob6OeVtpA@dpg-ci25kg3hp8u1a18ojs80-a:5432/pms_zf1s"
     
